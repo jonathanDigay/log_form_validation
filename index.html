@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>login_form_validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formContainer">
+
+            <div class="formGroup">
+                <h1>Sign In</h1>
+                <form>
+                    <label for="email">Email address</label>
+                    <br>
+                    <input type="email" id="email">
+                    <span class="emailErr">try to correct your email!!</span>
+                    <br>
+                    <br>
+                    <label for="password">Pasword</label>
+                    <br>
+                    <input type="pasword" id="password">
+                    <span class="passwordErr">try to correct your Password!!</span>
+                    <br>
+                    <br>
+                    <input type="submit" id="submit">
+                </form>
+
+                <div class="or"><button>or</button></div>
+
+                <div class="socialMedia">
+                    <button><i class="fab fa-facebook"></i> Facebook</button>
+                    <button><i class="fab fa-google"> </i> Google</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="text">
+                <p>Created by: D!gay</p>
+                <p>Published: April 14 2021</p>
+            </div>
+        </footer>
+
+        <div class="successModal" >
+                <h1>Yehey!</h1>
+                <h2>You are succesfulluy loging in</h2>
+        </div>
+    </div>
+
+    <script>
+        const email = document.getElementById("email")
+        const password = document.getElementById("password")
+        const submit=document.getElementById("submit")
+        const modal=document.querySelector(".successModal")
+        const emailErr=document.querySelector(".emailErr")
+        const paswordErr=document.querySelector(".passwordErr")
+
+        const emailVal="jonathan.digay1@gmail.com"
+        const passwordVal="digay"
+      
+        submit.addEventListener("click",(event)=>{
+            event.preventDefault();
+
+
+            if(email.value!==emailVal){
+               emailErr.style.display="block"
+               email.value=""
+            }
+               if(password.value!==passwordVal){
+                paswordErr.style.display="block"
+                 password.value=""
+               }
+     
+
+            if(email.value!==emailVal && password.value!==passwordVal)
+             modal.style.display="block";
+             return
+             
+
+        })
+
+    </script>
+</body>
+
+</html>

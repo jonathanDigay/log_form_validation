@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background: url("bg.jpg"), no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 90vh 10vh;
+      grid-template-rows: 90vh 10vh;
+}
+
+.container .formContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container .formContainer .formGroup {
+  width: 50%;
+  min-width: 400px;
+  min-height: 70%;
+  -webkit-box-shadow: 1px 1px 10px 1px black;
+          box-shadow: 1px 1px 10px 1px black;
+  background: coral;
+  padding: 0 20px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+.container .formContainer .formGroup h1 {
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 2px;
+}
+
+.container .formContainer .formGroup label {
+  font-size: 20px;
+}
+
+.container .formContainer .formGroup input {
+  width: 100%;
+  height: 35px;
+  background: #cccbcb;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.container .formContainer .formGroup input:focus {
+  background: white;
+}
+
+.container .formContainer .formGroup .emailErr, .container .formContainer .formGroup .passwordErr {
+  color: #fd0505;
+  letter-spacing: 2px;
+  display: none;
+}
+
+.container .formContainer .formGroup input[type="submit"] {
+  background: #fd5a1e;
+  border-radius: 10px;
+  color: #cccbcb;
+  height: 40px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding-left: 0;
+  width: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.container .formContainer .formGroup input[type="submit"]:hover {
+  background: #333;
+  color: #cccbcb;
+  border: none;
+}
+
+.container .formContainer .formGroup .or {
+  text-align: center;
+  margin: 5px 0;
+  position: relative;
+  height: 20px;
+}
+
+.container .formContainer .formGroup .or button {
+  position: absolute;
+  background: coral;
+  border: none;
+  outline: none;
+  pointer-events: none;
+  padding: 0 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #cccbcb;
+}
+
+.container .formContainer .formGroup .or::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: black;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.container .formContainer .formGroup .socialMedia {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .formContainer .formGroup .socialMedia .fa-facebook {
+  color: blue;
+  font-size: 20px;
+}
+
+.container .formContainer .formGroup .socialMedia .fa-google {
+  color: red;
+}
+
+.container .formContainer .formGroup .socialMedia button {
+  width: 45%;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.container footer {
+  background: #333;
+  color: #cccbcb;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container footer .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.container .successModal {
+  position: absolute;
+  height: 100Vh;
+  width: 100%;
+  background: white;
+  text-align: center;
+  display: none;
+}
+
+.container .successModal h1 {
+  color: red;
+  margin-top: 50px;
+}
+
+.container .successModal h2 {
+  color: #333;
+}
+/*# sourceMappingURL=style.css.map */
